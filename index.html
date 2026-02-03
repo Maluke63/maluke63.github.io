@@ -3,166 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libenyane Maluke | Portfolio</title>
+    <title>Libenyane Maluke | IT & Web Portfolio</title>
 
-    <!-- Embedded Dark Theme CSS -->
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
             background-color: #0f172a;
             color: #e5e7eb;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(2, 6, 23, 0.95);
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Header */
         header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 80px 20px;
+            padding: 0 15%;
             background: linear-gradient(135deg, #020617, #0f172a);
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 10px;
+            animation: fadeDown 1s ease;
         }
 
         header p {
-            font-size: 1.2rem;
             color: #94a3b8;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            animation: fadeUp 1.2s ease;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
+            padding: 12px 28px;
             background-color: #38bdf8;
             color: #020617;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
+            margin: 5px;
         }
 
-        section {
-            padding: 60px 15%;
-        }
-
-        h2 {
-            margin-bottom: 20px;
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #38bdf8;
             color: #38bdf8;
         }
 
-        ul li {
+        section {
+            padding: 100px 15%;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            background: #020617;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Projects */
+        .project {
+            background: #020617;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project h3 {
             margin-bottom: 10px;
         }
 
-        .project {
-            background-color: #020617;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 4px solid #38bdf8;
+        .project p {
+            color: #cbd5f5;
         }
 
-        a {
+        .project a {
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        /* Contact */
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.5rem;
             color: #38bdf8;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #020617;
+            padding: 25px;
+            background: #020617;
             color: #94a3b8;
         }
 
+        /* Animations */
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         @media (max-width: 768px) {
-            section {
-                padding: 40px 8%;
+            section, header {
+                padding: 80px 8%;
+            }
+
+            nav {
+                padding: 15px 5%;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- Navigation -->
+<nav>
+    <h2>LM</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
 <header>
-    <h1>Libenyane Maluke</h1>
-    <p>General IT & Web Development Student</p>
-    <a href="#projects" class="btn">View Projects</a>
+    <div>
+        <h1>Libenyane Maluke</h1>
+        <p>General IT & Web Development Student</p>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="CV.pdf" class="btn btn-outline" download>
+            <i class="fas fa-download"></i> Download CV
+        </a>
+    </div>
 </header>
 
+<!-- About -->
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am a final-year Information Technology student with a strong interest in general IT systems
-        and web development. I enjoy building practical, user-focused digital solutions and working
-        with modern tools to solve real-world problems.
+        I am a final-year Information Technology student with interests in general IT systems and web
+        development. I focus on building practical, reliable, and user-centered digital solutions.
     </p>
 </section>
 
+<!-- Skills -->
 <section id="skills">
     <h2>Skills</h2>
-    <ul>
-        <li><strong>General IT:</strong> System Analysis & Design, Database Fundamentals, IT Support</li>
-        <li><strong>Web Development:</strong> HTML, CSS, Basic JavaScript, Streamlit</li>
-        <li><strong>Programming & Data:</strong> Python, Pandas, NumPy, Scikit-learn</li>
-        <li><strong>Tools:</strong> Git, GitHub, Jupyter Notebook, VS Code</li>
-        <li><strong>Concepts:</strong> Human–Computer Interaction, Machine Learning Basics</li>
-    </ul>
+    <div class="skills-grid">
+        <div class="skill-box"><i class="fas fa-server"></i> General IT & Support</div>
+        <div class="skill-box"><i class="fas fa-code"></i> HTML, CSS, JavaScript</div>
+        <div class="skill-box"><i class="fas fa-database"></i> Python & Data Analysis</div>
+        <div class="skill-box"><i class="fas fa-brain"></i> HCI & System Design</div>
+    </div>
 </section>
 
+<!-- Projects -->
 <section id="projects">
     <h2>Projects</h2>
 
     <div class="project">
-        <h3>Data Analysis Project (CSV → Insights)</h3>
-        <p>
-            Analyzed real-world CSV datasets to clean data, explore patterns, and generate meaningful
-            insights using Python and data analysis libraries.
-        </p>
+        <h3>Data Analysis Project</h3>
+        <p>Explored CSV datasets to extract insights using Python and data analysis techniques.</p>
+        <a class="btn btn-outline" href="#" target="_blank">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
     </div>
 
     <div class="project">
         <h3>Student Dropout Prediction Model</h3>
-        <p>
-            Built a machine learning model to predict student dropout risk using academic and enrollment
-            data to support early intervention strategies.
-        </p>
+        <p>Built a machine learning model to predict student dropout risk.</p>
+        <a class="btn btn-outline" href="#" target="_blank">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
     </div>
 
     <div class="project">
-        <h3>Simple Web / Streamlit App</h3>
-        <p>
-            Developed a simple interactive web application using Streamlit to present data insights
-            in a user-friendly interface.
-        </p>
+        <h3>Streamlit Web App</h3>
+        <p>Developed an interactive Streamlit application for data visualization.</p>
+        <a class="btn btn-outline" href="#" target="_blank">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
     </div>
 
     <div class="project">
         <h3>HCI Prototype & Evaluation</h3>
-        <p>
-            Designed and evaluated a user interface prototype following Human–Computer Interaction
-            principles and usability evaluation techniques.
-        </p>
+        <p>Designed and evaluated a user interface using HCI principles.</p>
     </div>
 </section>
 
+<!-- Contact -->
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>
-        GitHub:
-        <a href="https://github.com/Maluke63" target="_blank">
-            github.com/Maluke63
-        </a>
-    </p>
+    <div class="contact-links">
+        <a href="https://github.com/Maluke63" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 Libenyane Maluke</p>
+    © 2026 Libenyane Maluke
 </footer>
 
 </body>
 </html>
+
