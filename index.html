@@ -1,286 +1,408 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libenyane Maluke | IT & Web Portfolio</title>
 
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Libenyane Maluke | Personal Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <meta name="description"
+          content="The personal portfolio of Libenyane Matheus Maluke, an IT student, aspiring software developer, soccer player and choral musician.">
 
-        body {
-            background-color: #0f172a;
-            color: #e5e7eb;
-            line-height: 1.7;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(2, 6, 23, 0.95);
-            padding: 15px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        nav h2 {
-            color: #38bdf8;
-            font-size: 1.2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: #e5e7eb;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        nav ul li a:hover {
-            color: #38bdf8;
-        }
-
-        /* Header */
-        header {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 15%;
-            background: linear-gradient(135deg, #020617, #0f172a);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            animation: fadeDown 1s ease;
-        }
-
-        header p {
-            color: #94a3b8;
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            animation: fadeUp 1.2s ease;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background-color: #38bdf8;
-            color: #020617;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin: 5px;
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #38bdf8;
-            color: #38bdf8;
-        }
-
-        section {
-            padding: 100px 15%;
-        }
-
-        h2 {
-            color: #38bdf8;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-box {
-            background: #020617;
-            padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .skill-box:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Projects */
-        .project {
-            background: #020617;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-        }
-
-        .project h3 {
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            color: #cbd5f5;
-        }
-
-        .project a {
-            margin-top: 15px;
-            display: inline-block;
-        }
-
-        /* Contact */
-        .contact-links a {
-            display: inline-block;
-            margin-right: 15px;
-            font-size: 1.5rem;
-            color: #38bdf8;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #020617;
-            color: #94a3b8;
-        }
-
-        /* Animations */
-        @keyframes fadeDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            section, header {
-                padding: 80px 8%;
-            }
-
-            nav {
-                padding: 15px 5%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav>
-    <h2>LM</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<header class="navbar">
+    <a href="./index.html" class="logo">LM<span>.</span></a>
 
-<!-- Hero -->
-<header>
-    <div>
-        <h1>Libenyane Maluke</h1>
-        <p>General IT & Web Development Student</p>
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="CV.pdf" class="btn btn-outline" download>
-            <i class="fas fa-download"></i> Download CV
-        </a>
-    </div>
+    <button class="menu-toggle" aria-label="Toggle navigation"
+            aria-expanded="false">☰</button>
+
+    <nav class="nav-links">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./contacts.html">Contact</a>
+    </nav>
 </header>
 
-<!-- About -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a 3rd-year Information Technology student with interests in general IT systems and web
-        development. I focus on building practical, reliable, and user-centered digital solutions.
-    </p>
-</section>
+<main>
 
-<!-- Skills -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-box"><i class="fas fa-server"></i> General IT & Support</div>
-        <div class="skill-box"><i class="fas fa-code"></i> HTML, CSS, JavaScript</div>
-        <div class="skill-box"><i class="fas fa-database"></i> Python & Data Analysis</div>
-        <div class="skill-box"><i class="fas fa-brain"></i> HCI & System Design</div>
-    </div>
-</section>
+    <!-- HERO SECTION -->
 
-<!-- Projects -->
-<section id="projects">
-    <h2>Projects</h2>
+    <section class="hero premium-hero">
 
-    <div class="project">
-        <h3>Data Analysis Project</h3>
-        <p>Explored CSV datasets to extract insights using Python and data analysis techniques.</p>
-        <a class="btn btn-outline" href="#" target="_blank">
-            <i class="fab fa-github"></i> View on GitHub
-        </a>
-    </div>
+        <div class="hero-content">
 
-    <div class="project">
-        <h3>Student Dropout Prediction Model</h3>
-        <p>Built a machine learning model to predict student dropout risk.</p>
-        <a class="btn btn-outline" href="#" target="_blank">
-            <i class="fab fa-github"></i> View on GitHub
-        </a>
-    </div>
+            <p class="eyebrow">WELCOME TO MY PERSONAL PORTFOLIO</p>
 
-    <div class="project">
-        <h3>Streamlit Web App</h3>
-        <p>Developed an interactive Streamlit application for data visualization.</p>
-        <a class="btn btn-outline" href="#" target="_blank">
-            <i class="fab fa-github"></i> View on GitHub
-        </a>
-    </div>
+            <h1>
+                Libenyane<br>
+                <span>Matheus Maluke.</span>
+            </h1>
 
-    <div class="project">
-        <h3>HCI Prototype & Evaluation</h3>
-        <p>Designed and evaluated a user interface using HCI principles.</p>
-    </div>
-</section>
+            <h2>
+                IT Student | Aspiring Software Developer
+            </h2>
 
-<!-- Contact -->
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-links">
-        <a href="https://github.com/Maluke63" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-</section>
+            <p class="hero-description">
+                I am an ambitious and creative individual with a passion
+                for technology, leadership, sports and music.
+
+                My journey combines technical learning, teamwork,
+                discipline and creativity, with a commitment to
+                continuous personal and professional development.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="./projects.html" class="btn primary">
+                    Explore My Work
+                </a>
+
+                <a href="./about.html" class="btn secondary">
+                    Discover My Story
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/Maluke63"
+                   target="_blank" rel="noopener noreferrer">
+                    GitHub ↗
+                </a>
+
+                <span>•</span>
+
+                <a href="./contact.html">Get In Touch</a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="image-frame">
+                <img src="profile.jpg"
+                     alt="Portrait of Libenyane Matheus Maluke">
+            </div>
+
+            <div class="image-caption">
+                <span class="status-dot"></span>
+                Driven by passion and purpose
+            </div>
+
+        </div>
+
+    </section>
+
+
+   
+    <!-- PROFESSIONAL PROFILE -->
+
+    <section class="profile-section">
+
+        <div class="section-heading">
+            <p class="eyebrow">01 / PROFESSIONAL OVERVIEW</p>
+
+            <h2>Professional Profile &<br>
+                <span>Areas of Excellence.</span>
+            </h2>
+
+            <p>
+                A developing IT professional combining technical</p>
+            <p>
+                knowledge, leadership experience and creative</p>
+            <p>
+                interests to build a well-rounded professional identity.
+            </p>
+        </div>
+
+        <div class="profile-layout">
+
+            <div class="profile-main">
+
+                <p class="profile-label">MY PROFESSIONAL PROFILE</p>
+
+                <h3>Driven by Knowledge.<br>
+                    Defined by <span>Growth.</span>
+                </h3>
+
+                <p>
+                    I am an Information Technology student at</p>
+                <p>
+                    Limkokwing University of Creative Technology,</p>
+                <p>
+                    with an academic background in programming,</p>
+                <p>
+                    web development, database management,</p>
+                <p>
+                    software engineering and data analysis.
+                </p>
+
+                <p>
+                    I am particularly interested in software</p>
+                <p>
+                    development and using technology to solve</p>
+                <p>
+                    practical problems. I value continuous learning,</p>
+                <p>
+                    practical experience and the opportunity to</p>
+                <p>
+                    contribute to meaningful projects.
+                </p>
+
+                <p>
+                    Beyond technology, my involvement in soccer</p>
+                <p>
+                    and choral music has strengthened my appreciation</p>
+                <p>
+                    for teamwork, discipline, creativity and leadership.
+                </p>
+
+            </div>
+
+
+            
+
+            <div class="profile-facts">
+
+                <div class="fact-item">
+                    <span>ACADEMIC FIELD</span>
+                    <h4>Information Technology</h4>
+                </div>
+
+                <div class="fact-item">
+                    <span>CAREER INTEREST</span>
+                    <h4>Software Development</h4>
+                </div>
+
+                <div class="fact-item">
+                    <span>LEADERSHIP EXPERIENCE</span>
+                    <h4>Class Representative & Choir Conductor</h4>
+                </div>
+
+                <div class="fact-item">
+                    <span>PERSONAL INTERESTS</span>
+                    <h4>Soccer & Choral Music</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AREAS OF EXCELLENCE -->
+
+    <section class="excellence-section">
+
+        <div class="section-heading">
+            <p class="eyebrow">02 / MY CAPABILITIES</p>
+
+            <h2>Areas of <span>Excellence.</span></h2>
+
+            <p>
+                Different experiences have helped shape my</p>
+            <p>
+                abilities, interests and approach to personal</p>
+            <p>
+                and professional development.
+            </p>
+        </div>
+
+        <div class="excellence-grid">
+
+            <article class="excellence-card">
+                <span class="card-index">01</span>
+                <div class="excellence-symbol">IT</div>
+
+                <h3>Technology & Development</h3>
+
+                <p>
+                    Developing technical knowledge through</p>
+                <p>
+                    programming, web technologies, databases,</p>
+                <p>
+                    data analysis and software development.
+                </p>
+
+                <a href="./skills.html">Explore technical skills →</a>
+            </article>
+
+
+            <article class="excellence-card">
+                <span class="card-index">02</span>
+                <div class="excellence-symbol">LS</div>
+
+                <h3>Leadership & Responsibility</h3>
+
+                <p>
+                    University class representation across</p>
+                <p>
+                    Years 1 to 3, together with experience</p>
+                <p>
+                    conducting a high-school choir.
+                </p>
+
+                <a href="./about.html">Explore my experience →</a>
+            </article>
+
+
+            <article class="excellence-card">
+                <span class="card-index">03</span>
+                <div class="excellence-symbol">SP</div>
+
+                <h3>Sports & Teamwork</h3>
+
+                <p>
+                    Soccer experience progressing from</p>
+                <p>
+                    C Division through B Division to A Division,</p>
+                <p>
+                    demonstrating commitment and teamwork.
+                </p>
+
+                <a href="./about.html">Read my story →</a>
+            </article>
+
+
+            <article class="excellence-card">
+                <span class="card-index">04</span>
+                <div class="excellence-symbol">CM</div>
+
+                <h3>Music & Creative Expression</h3>
+
+                <p>
+                    Choral singing, choir conducting,</p>
+                <p>
+                    competition participation and a</p>
+                <p>
+                    first-prize quartet achievement.
+                </p>
+
+                <a href="./about.html">Explore my achievements →</a>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SELECTED WORK -->
+
+    <section class="featured-work">
+
+        <div class="work-heading">
+
+            <div>
+                <p class="eyebrow">03 / SELECTED WORK</p>
+                <h2>Projects & <span>Innovation.</span></h2>
+                <p>
+                    Academic and practical projects that
+                    demonstrate my growing technical abilities.
+                </p>
+            </div>
+
+            <a href="./projects.html" class="btn secondary">
+                View All Projects →
+            </a>
+
+        </div>
+
+        <div class="featured-project">
+
+            <div class="featured-project-info">
+
+                <span class="project-category">
+                    DATA SCIENCE / MACHINE LEARNING
+                </span>
+
+                <h3>Student Dropout Prediction</h3>
+
+                <p>
+                    A machine learning project focused on</p>
+                <p>
+                    predicting student academic outcomes using</p>
+                <p>
+                    educational data and a Random Forest model.
+                </p>
+
+                <div class="project-metrics">
+                    <div>
+                        <strong>77%</strong>
+                        <span>Model accuracy</span>
+                    </div>
+
+                    <div>
+                        <strong>82%</strong>
+                        <span>Dropout precision</span>
+                    </div>
+                </div>
+
+                <a href="./projects.html" class="text-link">
+                    Explore project details →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROFESSIONAL DEVELOPMENT -->
+
+    <section class="development-section">
+
+        <p class="eyebrow">04 / PROFESSIONAL DEVELOPMENT</p>
+
+        <h2>Preparing for the <span>Next Opportunity.</span></h2>
+
+        <p>
+            I am continuously developing my technical knowledge,</p>
+        <p>
+            strengthening my practical experience and looking</p>
+        <p>
+            forward to opportunities where I can learn,</p>
+        <p>
+            contribute and grow professionally.
+        </p>
+
+        
+<div class="development-actions">
+
+
+<a href="./documents/Libenyane_Maluke_CV 2.pdf"
+   class="btn primary"
+   download="Libenyane_Maluke_CV.pdf">
+
+    Download My CV ↓
+
+</a>
+
+
+    <a href="./about.html" class="btn secondary">
+        Learn More About Me
+    </a>
+
+    <a href="./contact.html" class="btn secondary">
+        Contact Me
+    </a>
+
+</div>
+
+
+    </section>
+</main>
 
 <footer>
-    © 2026 Libenyane Maluke
+    <p>© 2026 Libenyane Matheus Maluke. All rights reserved.</p>
+    <p>Designed with purpose.</p>
 </footer>
 
 </body>
 </html>
-

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Libenyane Maluke</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">LM<span>.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation"
+            aria-expanded="false">☰</button>
+
+    <nav class="nav-links">
+    <a href="./index.html" class="active">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./projects.html">Projects</a>
+    <a href="./skills.html">Skills</a>
+    <a href="./contacts.html">Contact</a>
+</nav>
+</header>
+
+<main class="page-container">
+
+    <section class="page-heading">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h1>Get In <span>Touch.</span></h1>
+        <p>
+            Interested in working together, discussing technology
+            or exploring opportunities? Feel free to contact me.
+        </p>
+    </section>
+
+    <section class="contact-layout">
+
+        <div class="contact-info">
+            <h2>Let's start a <span>conversation.</span></h2>
+
+            <p>
+                I welcome opportunities to learn, collaborate
+                and contribute to meaningful projects.
+            </p>
+
+            <div class="contact-item">
+                <span>Email</span>
+                <a href="mailto:YOUR_EMAIL@example.com">
+                    malukelibenyane@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <span>GitHub</span>
+                <a href="https://github.com/Maluke63"
+                   target="_blank" rel="noopener noreferrer">
+                    github.com/Maluke63
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <span>Location</span>
+                <p>Lesotho</p>
+            </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required
+                   placeholder="Enter your name">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required
+                   placeholder="Enter your email">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="6" required
+                      placeholder="Write your message..."></textarea>
+
+            <button type="submit" class="btn primary">
+                Send Message
+            </button>
+
+            <p id="formStatus" aria-live="polite"></p>
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Libenyane Matheus Maluke. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
